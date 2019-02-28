@@ -1,8 +1,6 @@
 /* CSS Document */
 
 #menu {
-	position: absolute;
 	width: 70px;
-	border: 1px solid red;
 	background-color: green;
 }

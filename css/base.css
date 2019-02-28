@@ -22,3 +22,11 @@ table{
 .show {
 	display: block;
 }
+
+.position_relative {
+	position: relative;
+}
+
+.position_absolute {
+	position: absolute;
+}
