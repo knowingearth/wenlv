@@ -3,6 +3,7 @@
 	margin: 0;
 	padding: 0;
 	font-size: 12px;
+	text-align: center;
 	list-style: none;
 	font-family: '微软雅黑';
 }
@@ -29,4 +30,20 @@ table{
 
 .position_absolute {
 	position: absolute;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+.color {
+	color: #ed3636;
+}
+
+.background_color {
+	background-color: #ed3636;
 }
