@@ -1,0 +1,39 @@
+/* CSS Document */
+
+/*左侧主菜单*/
+#left_menu {
+	width: 220px;
+}
+
+#left_menu_first {
+	width: 70px;
+	background-color: green;
+}
+
+#left_menu_first .top {
+	height: 70px;
+	background-color: aquamarine;
+}
+
+#left_menu_second {
+	width: 150px;
+	background-color: #12C4C1;
+}
+
+#left_menu_second .top {
+	height: 70px;
+	background-color: #8BC41B;
+}
+
+/*右侧内容*/
+.content {
+	background-color: aquamarine;
+}
+.content .top {
+	height: 70px;
+}
+/*
+.content .main {
+	width: 100%;
+	background-color: aquamarine;
+}

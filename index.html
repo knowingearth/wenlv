@@ -2,180 +2,102 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>运营平台</title>
 		<link rel="shortcut icon" href="favicon.ico">
+		<title>运营平台</title>
 		<link href="css/base.css" rel="stylesheet" type="text/css"/>
 		<link href="css/index.css" rel="stylesheet" type="text/css"/>
 	</head>
 
 	<body>
-		<div id="left_menu" class="float_left">
-			<div id="left_menu_first" class="float_left">
-				<div class="top">
-				123
+		<div id="left_menu">
+			<ul>
+				<li>产品</li>
+				<li>活动</li>
+			</ul>
+		</div>
+		<div id="right_cont">
+			<div id="banner">
+				
+				<div id="top_menu">
+					<ul>
+						<li>产品</li>
+						<li>说明</li>
+						<li>活动</li>
+					</ul>
 				</div>
-				<ul>
-					<li>项目</li>
-					<li>消息</li>
-					<li>用户</li>
-				</ul>
-			</div>
-			<div id="left_menu_second" class="float_left">
-				<div class="top">
-				456
-				</div>
-				<ul>
-					<li>子菜单一</li>
-					<li>子菜单二</li>
-					<li>子菜单三</li>
-					<li>子菜单四</li>
-				</ul>
 			</div>
 		</div>
-		<div id="content" class="float_left content">
-			<div class="top">
-
-			</div>
-			<div class="">
-				<table>
-					<tr>
-						<td>中华人民共和国</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-		
-		
 	</body>
+	
+	
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		
 		var TARGET_WIDTH = 1000;
-		
-		//var gtChange = ((TARGET_WIDTH < $(window).width()) ? false : true),ltChange = ((TARGET_WIDTH >= $(window).width()) ? false : true);
 		var gtChange = true,ltChange = true;
+		var WINDOW_WIDTH = 0,WINDOW_HEIGHT = 0;
 		
-		// 显示or隐藏菜单
-		function changeMenu(){
-			// 浏览器可视宽度
-			var WINDOW_WIDTH = $(window).width();
-			//console.log(WINDOW_WIDTH+"："+gtChange+"_"+ltChange);
-			if(TARGET_WIDTH >= WINDOW_WIDTH && ltChange){
-				ltChange = false;
-				gtChange = true;
-				console.log("宽度减去230px");
-				// 左侧菜单动画
-				$("#left_menu").animate(
-					{
-						width: '-=230px',
-						opacity:'0'
-					},
-					"slow",
-					menuPositionAbsolute($("#left_menu"))
-				);
-				
-				// 左侧一级菜单动画
-				$("#left_menu_first").animate(
-					{
-						left: '-70px',
-						opacity:'0'
-					},
-					"slow",
-					positionAbsolute($("#left_menu_first"))
-				);
-				
-				// 左侧二级菜单动画
-				$("#left_menu_second").animate(
-					{
-						left: '-220px',
-						opacity:'0'
-					},
-					"slow",
-					positionAbsolute($("#left_menu_second"))
-				);
-				
-			}else if(TARGET_WIDTH < WINDOW_WIDTH && gtChange){
-				gtChange = false;
-				ltChange = true;
-				// 左侧菜单动画
-				$("#left_menu").animate(
-					{
-						width: '+=220px',
-						opacity:'1'
-					},
-					"800",
-					menuPositionRelative($("#left_menu"))
-				);
-				
-				// 左侧一级菜单动画
-				$("#left_menu_first").animate(
-					{
-						left: '0px',
-						opacity:'1'
-					},
-					"800",
-					positionRelative($("#left_menu_first"))
-				);
-				
-				// 左侧二级菜单动画
-				$("#left_menu_second").animate(
-					{
-						left: '0px',
-						opacity:'1'
-					},
-					"800",
-					positionRelative($("#left_menu_second"))
-				);
-				
-			}
-		};
-		
-		function positionRelative(e){
-			e.removeClass("position_absolute").addClass("position_relative");
-		};
-		
-		function positionAbsolute(e){
-			e.removeClass("position_relative").addClass("position_absolute");
-		};
-		
-		function menuPositionRelative(e){
-			e.removeClass("position_absolute").addClass("position_relative");
-			$("#content").animate({left: 'px'},"slow")
-		};
-		
-		function menuPositionAbsolute(e){
-			e.removeClass("position_relative").addClass("position_absolute");
-		};
-		
-		// 改变右侧内容尺寸
-		function contentWidth(winWidth){
-			
-		}
 		
 		// 监听窗口尺寸变化
 		window.onresize=function(){
-			changeMenu();
+			WINDOW_WIDTH = $(window).width(),WINDOW_HEIGHT = $(window).height();
+			// 调整左侧菜单
+			changeMenu(WINDOW_WIDTH, WINDOW_HEIGHT);
+			// 调整右侧内容区域大小
+			//rightContWidth(WINDOW_WIDTH, WINDOW_HEIGHT)
 		};
 		
-		// 加载事件
-		$(function(){
-			if($(window).width() < 1000){
-				changeMenu();
+		// 调整左侧菜单
+		function changeMenu(WinWidth,WinHeight){
+			console.log(TARGET_WIDTH+">="+WinWidth+":"+(TARGET_WIDTH >= WinWidth));
+			if(TARGET_WIDTH >= (WinWidth+50) && ltChange){
+				
+				$("#left_menu").animate(
+					{
+						width: '0px',
+						opacity:'0'
+					},
+					"slow"
+				);
+				$("#left_menu").width(0);
+				
+				ltChange = false;
+				gtChange = true;
+				$("#top_menu").show();
+			}else if(TARGET_WIDTH < (WinWidth-50) && gtChange){
+				// 左侧菜单动画
+				$("#left_menu").animate(
+					{
+						width: '230px',
+						opacity:'1'
+					},
+					"800"
+				);
+				
+				gtChange = false;
+				ltChange = true;
+				$("#top_menu").hide();
 			}
 			
-			$.ajax({
-				url: "http://test.minyintravel.net/api/user/minilogin/123",
-				type: "post",
-				dataType: "json",
-				success: function(e){
-					alert("成功"+e);
-					console.log(e)
-				},
-				error: function(e){
-					alert("异常"+e);
-				}
-			});
-		});
+			if(ltChange){
+				// 调整右侧内容区域大小
+				rightContWidth((WinWidth-230), WinHeight);
+			}else if(gtChange){
+				// 调整右侧内容区域大小
+				rightContWidth(WinWidth, WinHeight);
+			}
+		};
 		
+		// 右侧内容区域大小
+		function rightContWidth(WinWidth,WinHeight){
+			$("#left_menu").height(WinHeight);
+			$("#right_cont").height(WinHeight).width(WinWidth);
+		};
+		
+		// 初始化函数
+		$(function(){
+			WINDOW_WIDTH = $(window).width(),WINDOW_HEIGHT = $(window).height();
+			changeMenu(WINDOW_WIDTH, WINDOW_HEIGHT);
+			//rightContWidth(WINDOW_WIDTH,WINDOW_HEIGHT);
+		});
 	</script>
 </html>

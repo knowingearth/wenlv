@@ -1,39 +1,60 @@
 /* CSS Document */
 
-/*左侧主菜单*/
+/*左侧菜单*/
 #left_menu {
-	width: 220px;
+	width: 230px;
+	height: 100%;
+	float: left;
+	background-color: blueviolet;
 }
 
-#left_menu_first {
-	width: 70px;
-	background-color: green;
+/*右侧主体内容*/
+#right_cont {
+	height: 100%;
+	float: left;
+	color: #CA1E0F;
+	background-color: aqua;
 }
 
-#left_menu_first .top {
-	height: 70px;
-	background-color: aquamarine;
-}
-
-#left_menu_second {
-	width: 150px;
-	background-color: #12C4C1;
-}
-
-#left_menu_second .top {
-	height: 70px;
-	background-color: #8BC41B;
-}
-
-/*右侧内容*/
-.content {
-	background-color: aquamarine;
-}
-.content .top {
-	height: 70px;
-}
-/*
-.content .main {
+/*头部广告区域*/
+#right_cont #banner {
 	width: 100%;
-	background-color: aquamarine;
+	height: 100px;
+	background-color: #C30000;
+	background: linear-gradient(to bottom right, #8F1109, #CA1E0F);
+}
+
+#right_cont #banner #top_menu {
+	position: absolute;
+	top: 68px;
+	left: 43%;
+}
+
+#right_cont #banner #top_menu li {
+	width: 40px;
+	padding: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FCFCCC;
+	background-color: #038074;
+	background: linear-gradient(to bottom, #044E43, #038074);
+	float: left;
+	border: 2px solid #C09E64;
+	border-bottom: none;
+	border-right: none;
+	cursor: pointer;
+}
+
+#right_cont #banner #top_menu li:hover {
+	background-color:#056254;
+	background: linear-gradient(to bottom, #056254, #038B7E);
+}
+
+#right_cont #banner #top_menu li:first-child {
+	border-top-left-radius: 5px;
+}
+
+#right_cont #banner #top_menu li:last-child {
+	border-right: 2px solid #C09E64;
+	border-top-right-radius: 5px;
 }
