@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="favicon.ico">
-		<title>运营平台</title>
+		<title>mytitle</title>
 		<link href="css/base.css" rel="stylesheet" type="text/css"/>
 		<link href="css/index.css" rel="stylesheet" type="text/css"/>
 	</head>
@@ -13,17 +13,33 @@
 			<div id="left_menu_top">
 				5566
 			</div>
-			<ul>
-				<li>产品</li>
-				<li>活动</li>
-			</ul>
+			<div id="left_menu_content">
+				<ul id="menu">
+					<li>
+						<div>展业管理</div>
+						<ul>
+							<li>首页Banner设置</li>
+							<li>服饰</li>
+							<li>玩具</li>
+						</ul>
+					</li>
+					<li>
+						<div>活动</div>
+						<ul>
+							<li>著名旅游景点</li>
+							<li>户外探险</li>
+							<li>Party</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div id="right_cont">
 			<div id="banner">
 				
 				<div id="top_menu">
 					<ul>
-						<li>产品</li>
+						<li>首页Banner设置</li>
 						<li>说明</li>
 						<li>活动</li>
 					</ul>
@@ -53,7 +69,7 @@
 		function changeMenu(WinWidth,WinHeight){
 			console.log(TARGET_WIDTH+">="+WinWidth+":"+(TARGET_WIDTH >= WinWidth));
 			if(TARGET_WIDTH >= (WinWidth+50) && ltChange){
-				
+				$("#left_menu").addClass("position_absolute");
 				$("#left_menu").animate(
 					{
 						width: '0px',
@@ -61,7 +77,6 @@
 					},
 					"slow"
 				);
-				$("#left_menu").width(0);
 				
 				ltChange = false;
 				gtChange = true;
@@ -75,7 +90,7 @@
 					},
 					"800"
 				);
-				
+				$("#left_menu").removeClass("position_absolute");
 				gtChange = false;
 				ltChange = true;
 				$("#top_menu").hide();
@@ -101,6 +116,11 @@
 			WINDOW_WIDTH = $(window).width(),WINDOW_HEIGHT = $(window).height();
 			changeMenu(WINDOW_WIDTH, WINDOW_HEIGHT);
 			//rightContWidth(WINDOW_WIDTH,WINDOW_HEIGHT);
+			
+			$("#menu div").click(function(){
+				$("#menu ul").hide();
+				$(this).next().show();
+			});
 		});
 	</script>
 </html>

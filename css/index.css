@@ -5,13 +5,49 @@
 	width: 230px;
 	height: 100%;
 	float: left;
-	background-color: blueviolet;
+	background-color: #C30000;
+	background: linear-gradient(to bottom, #CA1E0F, #8F1109);
 }
 
 #left_menu #left_menu_top {
 	width: 100%;
 	height: 100px;
-	background:#4FB418;
+}
+
+#left_menu #left_menu_content #menu {
+	position: relative;
+}
+
+#left_menu #left_menu_content #menu ul {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 90px;
+	font-size: 15px;
+}
+
+#left_menu #left_menu_content #menu li {
+	text-align: left;
+	cursor: pointer;
+}
+
+#left_menu #left_menu_content #menu ul li {
+	width: 120px;
+	padding: 10px;
+	font-size: 15px;
+	background-color: antiquewhite;
+}
+
+#left_menu #left_menu_content #menu ul li:hover {
+	background-color: aquamarine;
+}
+
+#left_menu #left_menu_content #menu div {
+	width: 60px;
+	padding: 10px 15px;
+	font-size: 15px;
+	text-align: left;
+	background-color: coral;
 }
 
 /*右侧主体内容*/
@@ -37,8 +73,7 @@
 }
 
 #right_cont #banner #top_menu li {
-	width: 40px;
-	padding: 5px;
+	padding: 5px 10px;
 	font-size: 15px;
 	font-weight: bold;
 	color: #FCFCCC;
