@@ -39,9 +39,29 @@
 				
 				<div id="top_menu">
 					<ul>
-						<li>首页Banner设置</li>
-						<li>说明</li>
-						<li>活动</li>
+						<li>
+							<div>展业管理</div>
+							<ul>
+								<li>首页Banner设置</li>
+								<li>服饰</li>
+								<li>玩具</li>
+							</ul>
+						</li>
+						<li>
+							<div>活动</div>
+							<ul>
+								<li>五星景点</li>
+								<li>户外探险</li>
+								<li>Party</li>
+							</ul>
+						</li>
+						<li>
+							<div>关于我们</div>
+							<ul>
+								<li>公司详情</li>
+								<li>联系方式</li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -103,6 +123,8 @@
 				// 调整右侧内容区域大小
 				rightContWidth(WinWidth, WinHeight);
 			}
+			
+			$("#top_menu").css("left",(WinWidth-$("#top_menu").width())/2 + "px")
 		};
 		
 		// 右侧内容区域大小
@@ -121,6 +143,15 @@
 				$("#menu ul").hide();
 				$(this).next().show();
 			});
+			
+			$("#top_menu > ul > li").hover(
+				function(){
+					$(this).find("ul").show();
+				},
+				function(){
+					$(this).find("ul").hide();
+				}
+			);
 		});
 	</script>
 </html>
