@@ -11,7 +11,7 @@
 	<body>
 		<div id="left_menu">
 			<div id="left_menu_top">
-				5566
+				<img src="images/logo.png" alt="LOGO" style="max-width: 200px;"/>
 			</div>
 			<div id="left_menu_content">
 				<ul id="menu">
@@ -36,7 +36,9 @@
 		</div>
 		<div id="right_cont">
 			<div id="banner">
-				
+				<div id="logo_min">
+					<img src="images/logo_min.png" alt="LOGO"/>
+				</div>
 				<div id="top_menu">
 					<ul>
 						<li>
@@ -100,7 +102,11 @@
 				
 				ltChange = false;
 				gtChange = true;
-				$("#top_menu").show();
+				$("#top_menu,#logo_min").animate(
+					{
+					opacity: '1'
+					},"slow"
+				);
 			}else if(TARGET_WIDTH < (WinWidth-50) && gtChange){
 				// 左侧菜单动画
 				$("#left_menu").animate(
@@ -113,7 +119,11 @@
 				$("#left_menu").removeClass("position_absolute");
 				gtChange = false;
 				ltChange = true;
-				$("#top_menu").hide();
+				$("#top_menu,#logo_min").animate(
+					{
+					opacity: '0'
+					},"slow"
+				);
 			}
 			
 			if(ltChange){

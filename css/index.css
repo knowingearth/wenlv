@@ -5,8 +5,8 @@
 	width: 230px;
 	height: 100%;
 	float: left;
-	background-color: #C30000;
-	background: linear-gradient(to bottom, #CA1E0F, #8F1109);
+	background-color: whitesmoke;
+	/*background: linear-gradient(to bottom, #CA1E0F, #8F1109);*/
 }
 
 #left_menu #left_menu_top {
@@ -35,19 +35,32 @@
 	width: 120px;
 	padding: 10px;
 	font-size: 15px;
-	background-color: antiquewhite;
+	color: #FCFCCC;
+	border-top: 1px solid #C09E64;
+	background-color: #04D4C0;
+}
+
+#left_menu #left_menu_content #menu ul li:last-child {
+	border-bottom-left-radius: 5px;
 }
 
 #left_menu #left_menu_content #menu ul li:hover {
-	background-color: aquamarine;
+	background-color: coral;
 }
 
 #left_menu #left_menu_content #menu div {
 	width: 60px;
 	padding: 10px 15px;
-	font-size: 15px;
 	text-align: left;
-	background-color: coral;
+	font-size: 15px;
+	color: #FCFCCC;
+	border-top: 1px solid #C09E64;
+	background: linear-gradient(to right, #044E43, #038B7E);
+}
+
+#left_menu #left_menu_content #menu div:hover {
+	background-color:#056254;
+	background: linear-gradient(to right, #056254, #038B7E);
 }
 
 #left_menu #left_menu_content #menu div:hover {
@@ -59,15 +72,21 @@
 	height: 100%;
 	float: left;
 	color: #CA1E0F;
-	background-color: aqua;
+	background-color: ghostwhite;
 }
 
 /*头部广告区域*/
 #right_cont #banner {
 	width: 100%;
 	height: 100px;
-	background-color: #C30000;
-	background: linear-gradient(to bottom right, #8F1109, #CA1E0F);
+	background-color: #FF0000;
+	background: linear-gradient(to bottom right, #8F1109, #FF0000);
+}
+
+#right_cont #banner #logo_min {
+	width: 100px;
+	height: 100px;
+	position: absolute;
 }
 
 #right_cont #banner #top_menu {
@@ -115,7 +134,7 @@
 #right_cont #banner #top_menu > ul > li ul li {
 	width: 82px;
 	padding: 5px 10px;
-	background-color: darkorange;
+	background-color: #038B7E;
 }
 
 #right_cont #banner #top_menu > ul > li ul li:hover {
