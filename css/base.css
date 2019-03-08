@@ -7,10 +7,11 @@ html,body {
 * {
 	margin: 0;
 	padding: 0;
-	font-size: 12px;
+	font-size: 13px;
 	text-align: center;
 	list-style: none;
 	font-family: '微软雅黑';
+	color:#7A7A7A;
 }
 
 table{  
@@ -47,4 +48,36 @@ td {
 
 .float_right {
 	float: right;
+}
+
+input {
+	padding: 3px 7px;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	color: ghostwhite;
+}
+
+input:hover {
+	color: white;
+}
+
+.input_add {
+	background-color: #3C8DBC;
+}
+
+.input_add:hover {
+	background-color: #4395C4;
+}
+.input_edit {
+	background-color:#04D4C0;
+}
+.input_edit:hover {
+	background-color: #13D9C6;
+}
+.input_del {
+	background-color: coral;
+}
+.input_del:hover {
+	background-color: red;
 }
