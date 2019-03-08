@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>无标题文档</title>
+		<link href="css/base.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="css/page/myPagination.css" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body>
+		<form>
+			<div class="query">
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+			<div class="tableData">
+				<table>
+					<tr class="th">
+						<td>名称</td>
+						<td>时间</td>
+						<td>内容</td>
+						<td>操作</td>
+					</tr>
+					<tr>
+						<td>张三</td>
+						<td>2018-09-06</td>
+						<td>模压魂牵梦萦去微软吉格斯眊枯干trehalose</td>
+						<td>
+							<input type="button" value="编辑"/>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<!-- 分页 -->
+			<div id="pagination" class="pagination"></div>
+		</form>
+	</body>
+	<script type="text/javascript" src="css/page/myPagination.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			new myPagination({
+				id: 'pagination',
+				curPage:1, //初始页码
+				pageTotal: 50, //总页数
+				pageAmount: 10,  //每页多少条
+				dataTotal: 500, //总共多少条数据
+				pageSize: 5, //可选,分页个数
+				showPageTotalFlag:true, //是否显示数据统计
+				showSkipInputFlag:true, //是否支持跳转
+				getPage: function (page) {
+					//获取当前页数
+					console.log(page);
+				}
+			})
+		}
+	</script>
+</html>

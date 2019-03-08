@@ -11,7 +11,7 @@
 	<body>
 		<div id="left_menu">
 			<div id="left_menu_top">
-				<img src="images/logo.png" alt="LOGO" style="max-width: 200px;"/>
+				<img src="images/logo1.png" alt="LOGO" style="max-width: 200px;"/>
 			</div>
 			<div id="left_menu_content">
 				<ul id="menu">
@@ -37,7 +37,7 @@
 		<div id="right_cont">
 			<div id="banner">
 				<div id="logo_min">
-					<img src="images/logo_min.png" alt="LOGO"/>
+					<img src="images/logo_min1.png" alt="LOGO"/>
 				</div>
 				<div id="top_menu">
 					<ul>
@@ -67,6 +67,9 @@
 					</ul>
 				</div>
 			</div>
+			<div id="data_cont">
+				<iframe style="box-sizing: border-box; height: 98%; background: white; " height='98%' width='98%' frameBorder=0 id="frmright" name="frmright" src="test.html" allowTransparency="true"></iframe>
+			</div>
 		</div>
 	</body>
 	
@@ -74,7 +77,7 @@
 	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		var TARGET_WIDTH = 1000;
-		var gtChange = true,ltChange = true;
+		var gtChange = true,ltChange = true,flag = true;
 		var WINDOW_WIDTH = 0,WINDOW_HEIGHT = 0;
 		
 		
@@ -89,7 +92,9 @@
 		
 		// 调整左侧菜单
 		function changeMenu(WinWidth,WinHeight){
-			console.log(TARGET_WIDTH+">="+WinWidth+":"+(TARGET_WIDTH >= WinWidth));
+			console.log(ltChange,gtChange);
+			console.log(TARGET_WIDTH+">="+(WinWidth+50)+":"+(TARGET_WIDTH >= (WinWidth+50)));
+			console.log(TARGET_WIDTH+"<"+(WinWidth-50)+":"+(TARGET_WIDTH < (WinWidth-50)));
 			if(TARGET_WIDTH >= (WinWidth+50) && ltChange){
 				$("#left_menu").addClass("position_absolute");
 				$("#left_menu").animate(
@@ -102,6 +107,7 @@
 				
 				ltChange = false;
 				gtChange = true;
+				flag = false;
 				$("#top_menu,#logo_min").animate(
 					{
 					opacity: '1'
@@ -119,9 +125,30 @@
 				$("#left_menu").removeClass("position_absolute");
 				gtChange = false;
 				ltChange = true;
+				flag = false;
 				$("#top_menu,#logo_min").animate(
 					{
 					opacity: '0'
+					},"slow"
+				);
+			}
+			
+			if(flag){
+				$("#left_menu").addClass("position_absolute");
+				$("#left_menu").animate(
+					{
+						width: '0px',
+						opacity:'0'
+					},
+					"slow"
+				);
+				
+				ltChange = false;
+				gtChange = true;
+				flag = false;
+				$("#top_menu,#logo_min").animate(
+					{
+					opacity: '1'
 					},"slow"
 				);
 			}
@@ -139,13 +166,14 @@
 		
 		// 右侧内容区域大小
 		function rightContWidth(WinWidth,WinHeight){
-			$("#left_menu").height(WinHeight);
-			$("#right_cont").height(WinHeight).width(WinWidth);
+			//$("#left_menu").height(WinHeight);
+			$("#right_cont").width(WinWidth)//.height(WinHeight);
 		};
 		
 		// 初始化函数
 		$(function(){
 			WINDOW_WIDTH = $(window).width(),WINDOW_HEIGHT = $(window).height();
+			console.log(WINDOW_WIDTH);
 			changeMenu(WINDOW_WIDTH, WINDOW_HEIGHT);
 			//rightContWidth(WINDOW_WIDTH,WINDOW_HEIGHT);
 			

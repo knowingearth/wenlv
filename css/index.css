@@ -5,13 +5,14 @@
 	width: 230px;
 	height: 100%;
 	float: left;
-	background-color: whitesmoke;
+	background: whitesmoke url(../images/menu/bg.png) repeat-y fixed;
 	/*background: linear-gradient(to bottom, #CA1E0F, #8F1109);*/
 }
 
 #left_menu #left_menu_top {
 	width: 100%;
 	height: 100px;
+	background-color: #3C8DBC;
 }
 
 #left_menu #left_menu_content #menu {
@@ -36,7 +37,7 @@
 	padding: 10px;
 	font-size: 15px;
 	color: #FCFCCC;
-	border-top: 1px solid #C09E64;
+	border-bottom: 1px solid #222D32;
 	background-color: #04D4C0;
 }
 
@@ -54,8 +55,9 @@
 	text-align: left;
 	font-size: 15px;
 	color: #FCFCCC;
-	border-top: 1px solid #C09E64;
-	background: linear-gradient(to right, #044E43, #038B7E);
+	border-bottom: 1px solid #222D32;
+	background: linear-gradient(to right, #044E43, #038074);
+	/*background: linear-gradient(to right, #00644C, #00A65D);*/
 }
 
 #left_menu #left_menu_content #menu div:hover {
@@ -79,8 +81,8 @@
 #right_cont #banner {
 	width: 100%;
 	height: 100px;
-	background-color: #FF0000;
-	background: linear-gradient(to bottom right, #8F1109, #FF0000);
+	background-color: #0072BC;
+	background: linear-gradient(to bottom right, #3C8DBC, #367FA9);
 }
 
 #right_cont #banner #logo_min {
@@ -91,12 +93,12 @@
 
 #right_cont #banner #top_menu {
 	position: absolute;
-	top: 72px
+	top: 70px
 }
 
 #right_cont #banner #top_menu > ul > li {
 	width: 80px;
-	padding: 5px 10px;
+	padding: 7px 10px;
 	position: relative;
 	font-size: 20px;
 	font-weight: bold;
@@ -104,9 +106,7 @@
 	background-color: #038074;
 	background: linear-gradient(to bottom, #044E43, #038074);
 	float: left;
-	border: 2px solid #C09E64;
-	border-bottom: none;
-	border-right: none;
+	border-left: 1px solid #367FA9;
 	cursor: pointer;
 }
 
@@ -120,20 +120,21 @@
 }
 
 #right_cont #banner #top_menu > ul > li:last-child {
-	border-right: 2px solid #C09E64;
+	border-right: 1px solid #367FA9;
 	border-top-right-radius: 5px;
 }
 
 #right_cont #banner #top_menu > ul > li ul {
 	display: none;
 	position: absolute;
-	top: 26px;
+	top: 30px;
 	left: -1px;
 }
 
 #right_cont #banner #top_menu > ul > li ul li {
 	width: 82px;
 	padding: 5px 10px;
+	border-top: 1px solid #D2FFF8;
 	background-color: #038B7E;
 }
 
@@ -144,4 +145,9 @@
 #right_cont #banner #top_menu > ul > li ul li:last-child {
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+}
+
+#right_cont #data_cont {
+	margin-top: 10px;
+	width: 100%;
 }

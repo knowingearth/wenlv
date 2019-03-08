@@ -1,0 +1,14 @@
+/* CSS Document */
+
+.tableData table {
+	width: 100%;
+}
+
+.tableData .th td {
+	font-weight: bold;
+	border-bottom: 2px solid #ccc;
+}
+
+.tableData table td {
+	padding: 5px 0;
+}
