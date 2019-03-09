@@ -93,7 +93,7 @@
 
 #right_cont #banner #top_menu {
 	position: absolute;
-	top: 70px
+	top: 69px
 }
 
 #right_cont #banner #top_menu > ul > li {
@@ -108,6 +108,10 @@
 	float: left;
 	border-left: 1px solid #367FA9;
 	cursor: pointer;
+}
+
+#right_cont #banner #top_menu > ul > li > div {
+	color: #FCFCCC;
 }
 
 #right_cont #banner #top_menu > ul > li:hover {
@@ -127,7 +131,7 @@
 #right_cont #banner #top_menu > ul > li ul {
 	display: none;
 	position: absolute;
-	top: 30px;
+	top: 31px;
 	left: -1px;
 }
 
@@ -136,6 +140,7 @@
 	padding: 5px 10px;
 	border-top: 1px solid #D2FFF8;
 	background-color: #038B7E;
+	color: #FCFCCC;
 }
 
 #right_cont #banner #top_menu > ul > li ul li:hover {
@@ -150,4 +155,5 @@
 #right_cont #data_cont {
 	margin-top: 10px;
 	width: 100%;
+	overflow: auto;
 }

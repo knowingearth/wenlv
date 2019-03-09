@@ -1,5 +1,39 @@
 /* CSS Document */
 
+.query {
+	padding: 0 10px;
+}
+
+.query li {
+	float: left;
+	margin: 5px;
+}
+
+.query li input {
+	width: 135px;
+	height: 20px;
+	text-align: left;
+}
+
+.query .search {
+	clear: left;
+	text-align: right;
+}
+
+.query .search input {
+	width: 56px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.query .search .control {
+	float: left;
+}
+
+.tableData {
+	padding: 5px 10px;
+}
+
 .tableData table {
 	width: 100%;
 }
@@ -11,4 +45,10 @@
 
 .tableData table td {
 	padding: 5px 0;
+}
+
+#pagination {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
 }

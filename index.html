@@ -11,7 +11,7 @@
 	<body>
 		<div id="left_menu">
 			<div id="left_menu_top">
-				<img src="images/logo1.png" alt="LOGO" style="max-width: 200px;"/>
+				<img src="images/logo.png" alt="LOGO" style="max-width: 200px;"/>
 			</div>
 			<div id="left_menu_content">
 				<ul id="menu">
@@ -37,7 +37,7 @@
 		<div id="right_cont">
 			<div id="banner">
 				<div id="logo_min">
-					<img src="images/logo_min1.png" alt="LOGO"/>
+					<img src="images/logo_min.png" alt="LOGO"/>
 				</div>
 				<div id="top_menu">
 					<ul>
@@ -167,7 +167,8 @@
 		// 右侧内容区域大小
 		function rightContWidth(WinWidth,WinHeight){
 			//$("#left_menu").height(WinHeight);
-			$("#right_cont").width(WinWidth)//.height(WinHeight);
+			$("#right_cont").width(WinWidth);//.height(WinHeight);
+			$("#data_cont").height(WinHeight-110);
 		};
 		
 		// 初始化函数

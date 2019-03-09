@@ -52,32 +52,43 @@ td {
 
 input {
 	padding: 3px 7px;
-	cursor: pointer;
-	border: none;
+	border: 1px solid #ccc;
 	border-radius: 5px;
+}
+
+.input {
+	border: none;
 	color: ghostwhite;
+	cursor: pointer;
+	background-color: #3C8DBC;
 }
-
-input:hover {
+.input:hover {
 	color: white;
+	background-color: #4395C4;
 }
-
-.input_add {
+.add {
 	background-color: #3C8DBC;
 }
 
-.input_add:hover {
+.add:hover {
 	background-color: #4395C4;
 }
-.input_edit {
+.edit {
 	background-color:#04D4C0;
 }
-.input_edit:hover {
+.edit:hover {
 	background-color: #13D9C6;
 }
-.input_del {
+.del {
 	background-color: coral;
 }
-.input_del:hover {
+.del:hover {
 	background-color: red;
+}
+.clear {
+	margin-right: 100px;
+	background-color: #8A8A8A;
+}
+.clear:hover {
+	background-color: #939393;
 }
