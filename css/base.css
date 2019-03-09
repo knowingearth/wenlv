@@ -71,13 +71,13 @@ input {
 }
 
 .add:hover {
-	background-color: #4395C4;
+	background-color: #4E9BC7;
 }
 .edit {
 	background-color:#04D4C0;
 }
 .edit:hover {
-	background-color: #13D9C6;
+	background-color: #18EAD6;
 }
 .del {
 	background-color: coral;
