@@ -12,6 +12,8 @@ html,body {
 	list-style: none;
 	font-family: '微软雅黑';
 	color:#7A7A7A;
+	-webkit-transition: all .3s;
+	transition: all .3s;
 }
 
 table{  
@@ -54,12 +56,13 @@ input,select {
 	padding: 3px 7px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
+	text-align: left;
 }
 
-input[type='button'],tr {
-	-webkit-transition: all .3s;
-	transition: all .3s;
+input[type='button'],input[type='select'] {
+	text-align: center;
 }
+
 
 .input {
 	border: none;

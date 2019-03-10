@@ -46,7 +46,7 @@
 	padding: 5px 0;
 }
 
-.tableData tr:nth-child(odd) {
+tr:nth-child(odd) {
 	background-color: #F0F0F0;
 }
 .tableData tr:hover {
@@ -86,6 +86,37 @@ form table tr td:nth-child(odd) {
 
 form table tr td:nth-child(even) {
 	text-align: left;
+}
+
+form table td li {
+	float: left;
+	position: relative;
+	border: 1px solid #ccc;
+	margin: 5px;
+	padding: 2px 5px;
+	border-radius: 5px;
+	border-top-right-radius: 0;
+	cursor: pointer;
+}
+
+form table td li span {
+	display: block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	border-radius: 10px;
+	background-color: coral;
+	color: ghostwhite;
+	cursor: pointer;
+	top: -7px;
+	right: -7px;
+	opacity: 0;
+}
+
+form table td li span:hover {
+	background-color: coral;
+	color: ghostwhite;
+	opacity: 1;
 }
 
 form table tr:last-child td {
