@@ -50,10 +50,15 @@ td {
 	float: right;
 }
 
-input {
+input,select {
 	padding: 3px 7px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
+}
+
+input[type='button'],tr {
+	-webkit-transition: all .3s;
+	transition: all .3s;
 }
 
 .input {

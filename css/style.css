@@ -15,6 +15,10 @@
 	text-align: left;
 }
 
+.query li select {
+	width: 135px;
+}
+
 .query .search {
 	clear: left;
 	text-align: right;
