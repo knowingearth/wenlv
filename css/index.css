@@ -155,5 +155,6 @@
 #right_cont #data_cont {
 	margin-top: 10px;
 	width: 100%;
+	height: calc(100% - 110px);
 	overflow: auto;
 }

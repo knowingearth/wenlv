@@ -50,6 +50,7 @@
 }
 .tableData tr:first-child {
 	background-color: #3C8DBC;
+	border-top-left-radius: 5px;
 }
 .tableData tr:first-child td {
 	color: ghostwhite;
